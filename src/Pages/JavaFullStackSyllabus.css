@@ -1,0 +1,351 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#020617;
+}
+
+.syllabus-container{
+  background:#020617;
+  color:white;
+  padding:30px;
+}
+
+.top-section{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
+  flex-wrap:wrap;
+}
+
+.left-java{
+  text-align:center;
+}
+
+.left-java img{
+  width:120px;
+}
+
+.left-java h2{
+  color:#9333ea;
+  font-size:30px;
+  margin-top:10px;
+}
+
+.center-title{
+  flex:1;
+  text-align:center;
+}
+
+.center-title h1{
+  font-size:40px;
+  font-weight:bold;
+}
+
+.center-title span{
+  color:#9333ea;
+}
+
+.center-title p{
+  color:#cbd5e1;
+  font-size:20px;
+  margin-top:15px;
+  line-height:1.8;
+}
+
+.right-image img{
+  width:260px;
+}
+
+
+.module-wrapper{
+  padding:15px;
+  margin-bottom:25px; 
+}
+
+.module-title{
+  display:inline-block;
+  background:#7e22ce;
+  padding:4px 12px;
+  border-radius:10px;
+  font-size:18px;
+  font-weight:bold;
+  margin-bottom:35px;
+}
+
+.cards-row{
+  display:flex;
+  gap:45px;
+  flex-wrap:wrap;
+  
+}
+
+
+.card{
+  flex:1;
+  background:#0f172a;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:18px;
+  padding:1ch;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#9333ea;
+}
+
+.card-heading{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.card-icon{
+    width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+  
+}
+
+.purple{
+  background:#7e22ce;
+}
+
+.blue{
+  background:#2563eb;
+}
+
+.green{
+  background:#16a34a;
+}
+
+.orange{
+  background:#ea580c;
+}
+
+.pink{
+  background:#db2777;
+}
+
+.cyan{
+  background:#0891b2;
+}
+
+.yellow{
+  background:#ca8a04;
+}
+
+.card h3{
+  font-size:30px;
+}
+
+.card ul{
+  padding-left:20px;
+  color:#2563eb;
+}
+
+.card ul li{
+  margin-bottom:14px;
+  color: white;
+  line-height:1.0;
+  font-size:17px;
+}
+
+.card ul li::marker {
+  color: #8b5cf6; 
+}
+
+.internship-wrapper {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  min-height: 210px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.module-badge {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  background: #9333ea;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.internship-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.internship-content h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.internship-content p {
+  color: #d1d5db;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #a855f7, #6d28d9);
+  font-size: 34px;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+}
+
+.left-building {
+  position: absolute;
+  left: 160px;
+  bottom: 32px;
+  width: 180px;
+  opacity: 0.9;
+}
+
+.right-certificate {
+  position: absolute;
+  right: 190px;
+  bottom: 52px;
+  width: 160px;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+
+  .internship-wrapper {
+    padding: 40px 20px;
+  }
+
+  .internship-content h1 {
+    font-size: 28px;
+  }
+
+  .internship-content p {
+    font-size: 16px;
+  }
+
+  .left-building,
+  .right-certificate {
+    width: 100px;
+    opacity: 0.3;
+  }
+}
+
+.programming-card {
+  flex: 0.6;
+   max-width: 500px;
+}
+
+.sql-card{
+  flex: 0.2;   
+  max-width: 420px;
+  height: 240px;
+}
+
+.softskill-card {
+  flex: 0.2;  
+  max-width: 230px;
+  height: 240px;
+}
+
+.core-java{
+  flex: 0.3;  
+  max-width: 380px;
+  height: 240px;
+}
+
+.core-ui{
+  flex: 0.2;  
+  max-width: 220px;
+  height: 240px;
+}
+
+.aptitude{
+  flex: 0.3; 
+max-width: 300px;
+}
+
+.Core-Java3{
+  flex: 0.4;  
+max-width: 260px;
+}
+
+.Advance-UI{
+  flex: 0.2;   
+max-width: 260px;
+height: 160px;
+}
+
+.Mini-Projects{
+  flex: 0.3;  
+max-width: 350px;
+height: 160px;
+}
+
+.Advance-Java{
+  flex: 0.5;  
+max-width: 300px;
+}
+
+
+.Real-World-Projects{
+  flex: 0.6;   
+max-width: 360px;
+height: 140px;
+}
+
+.Pre-Placement-Activities{
+  flex: 0.4;  
+max-width: 440px;
+height: 170px;
+}
+
+@media(max-width:768px){
+
+  .center-title h1{
+    font-size:42px;
+  }
+  .center-title p{
+    font-size:16px;
+  }
+
+  .right-image img{
+    width:180px;
+  }
+
+  .card h3{
+    font-size:24px;
+  }
+
+  .internship-box h2{
+    font-size:35px;
+  }
+
+}
