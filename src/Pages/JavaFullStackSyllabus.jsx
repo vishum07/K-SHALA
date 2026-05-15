@@ -1,3 +1,4 @@
+
 import leftbulding from "./images/leftBuilding.png";
 import Certificate from "./images/Certificate.png";
 import laptopcode from './images/laptopcode.png';
@@ -14,24 +15,8 @@ import rwp from './images/rwp.png';
 import ppa from './images/ppa.png';
 import React from "react";
 
-import {
-  FaJava,
-  FaDatabase,
-  FaLaptopCode,
-  FaBrain,
-  FaReact,
-  FaProjectDiagram,
-  FaBriefcase,
-  FaUserTie,
-  FaCode,
-} from "react-icons/fa";
-
-import {
-  MdOutlineSchool,
-  MdWorkspacePremium,
-} from "react-icons/md";
-
 import "./JavaFullStackSyllabus.css";
+
 
 const JavaFullStackSyllabus = () => {
   return (
@@ -40,7 +25,8 @@ const JavaFullStackSyllabus = () => {
         <div className="left-java">
           <img
             src="https://cdn-icons-png.flaticon.com/512/226/226777.png"
-            alt="java"/>
+            alt="Java"/>
+
           <h2>Java</h2>
         </div>
 
@@ -57,9 +43,10 @@ const JavaFullStackSyllabus = () => {
         </div>
 
         <div className="right-image">
-          <img
+            <img
             src={laptopcode}
-            alt="coding"/>
+            alt="Coding"/>
+
         </div>
 
       </div>
@@ -73,7 +60,8 @@ const JavaFullStackSyllabus = () => {
         <div className="cards-row">
           <div className="card programming-card">
             <div className="card-heading">
-                  <img src={pl} alt="icon" className="card-icon"/>
+              <img  src={pl} alt="Programming" className="card-icon"/>
+
               <h3>Programming Fundamentals</h3>
             </div>
 

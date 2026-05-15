@@ -19,22 +19,11 @@ import img5 from "./images/class5.png";
 
 import {
   FaCheckCircle,
-  FaBookOpen,
-  FaCommentDots,
-  FaPlayCircle,
-  FaShieldAlt,
-  FaChartBar,
-  FaFileAlt,
-  FaComments,
   FaUserGraduate,
   FaPlay,
   FaStar,
-  FaBook,
-  FaChartLine,
   FaQuestionCircle,
-  FaRobot,
-  FaGooglePlay,
-  FaApple,
+
 } from "react-icons/fa";
 
 const Home = () => {
@@ -168,7 +157,7 @@ const Home = () => {
           <img
             className="student-img"
             src={herobg}
-            alt=""
+            alt="Hero background"
           />
 
         </div>
@@ -374,15 +363,15 @@ const Home = () => {
 
         <button className="store-btn">
                                
-      <a href="https://play.google.com/store/apps/details?id=com.kshetrapatikshala" target="_blank">
-             <img src="https://k-shala.com/assets/images/play-store-icon.png"/>
+      <a href="https://play.google.com/store/apps/details?id=com.kshetrapatikshala" target="_blank" rel="noopener noreferrer">
+             <img src="https://k-shala.com/assets/images/play-store-icon.png" alt="Play Store"/>
       </a>
       </button>
 
         <button className="store-btn">        
           <div>      
-                <a href="https://apps.apple.com/in/app/k-shala/id6738890750" target="_blank">
-                        <img src="https://k-shala.com/assets/images/app-store-icon.png"/>
+                <a href="https://apps.apple.com/in/app/k-shala/id6738890750" target="_blank" rel="noopener noreferrer">
+                        <img src="https://k-shala.com/assets/images/app-store-icon.png" alt="App Store"/>
                 </a>          
           </div>
         </button>
