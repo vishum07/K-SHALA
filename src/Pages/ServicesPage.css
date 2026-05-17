@@ -5,17 +5,33 @@
   box-sizing: border-box;
 }
 
+.services-back-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 80px 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .services-back-wrap {
+    padding: 16px 20px 0;
+  }
+}
+
 .services-page {
-  font-family: Arial, sans-serif;
-  background: #f5f7fb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(0, 207, 255, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255, 159, 28, 0.08), transparent 25%),
+    linear-gradient(135deg, #020617, #04122b, #071a36);
+  color: #ffffff;
 }
 
 .hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background: linear-gradient(90deg, #020024, #090979, #000);
+  background: transparent;
   color: white;
   min-height: 80vh;
 }
@@ -41,7 +57,10 @@
 }
 
 .hero-left h1 span {
-  color: #a855f7;
+  background: linear-gradient(90deg, #ffffff, #38bdf8, #00cfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-left p {
@@ -70,25 +89,34 @@
 
 .primary-btn,
 .filled-btn {
-    background: linear-gradient(90deg, #00c6ff, #7b2ff7);
+  background: linear-gradient(135deg, #00cfff, #1da1ff);
   border: none;
   color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .primary-btn:hover,
 .filled-btn:hover {
-  background: #7e22ce;
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(0, 207, 255, 0.35);
 }
 
 .secondary-btn,
 .outline-btn {
   background: transparent;
-  border: 2px solid #7b2ff7;
+  border: 2px solid rgba(0, 207, 255, 0.35);
   color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.secondary-btn:hover,
+.outline-btn:hover {
+  border-color: #ff9f1c;
+  box-shadow: 0 0 16px rgba(255, 159, 28, 0.25);
 }
 
 .outline-btn {
-  color:#7b2ff7;
+  color: #38bdf8;
 }
 
 .features1 {
@@ -122,13 +150,13 @@
 .courses-section {
   padding: 80px;
   text-align: center;
-   background: black;
-
+  background: transparent;
 }
 
 .course-tag {
-  background: #ede9fe;
-  color: #7c3aed;
+  background: rgba(0, 207, 255, 0.12);
+  color: #00cfff;
+  border: 1px solid rgba(0, 207, 255, 0.25);
   padding: 8px 18px;
   border-radius: 20px;
   font-size: 14px;
@@ -137,7 +165,9 @@
 .courses-section h2 {
   margin-top: 20px;
   font-size: 45px;
+  font-weight: 800;
   margin-bottom: 15px;
+  color: #ffffff;
 }
 
 .course-desc {
@@ -158,16 +188,20 @@
 
 .course-card {
   width: 350px;
-   background: rgba(10, 20, 40, 0.85);
+  background: rgba(8, 20, 40, 0.8);
+  backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 20px;
   text-align: left;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: 0.3s;border: 1px solid #4facfe7a;  
+  border: 1px solid rgba(0, 207, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 207, 255, 0.08);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .course-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
+  border-color: rgba(0, 207, 255, 0.35);
+  box-shadow: 0 0 30px rgba(0, 207, 255, 0.18);
 }
 
 .course-card h3 {
@@ -177,12 +211,12 @@
 }
 
 .course-card h4 {
-  color: #7c3aed;
+  color: #38bdf8;
   margin-bottom: 15px;
 }
 
 .course-card p {
-  color: #6b7280;
+  color: #cbd5e1;
   line-height: 1.7;
   margin-bottom: 25px;
 }
@@ -195,7 +229,9 @@
 }
 
 .course-info span {
-  background: #f3f4f6;
+  background: rgba(0, 207, 255, 0.1);
+  color: #cbd5e1;
+  border: 1px solid rgba(0, 207, 255, 0.15);
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 14px;

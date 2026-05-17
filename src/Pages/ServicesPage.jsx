@@ -3,11 +3,15 @@ import React from "react";
 import "./ServicesPage.css";
 import bg2 from "./images/bg2.png";
 import { Link } from "react-router-dom";
+import BackButton from "../components/BackButton";
 
 const ServicesPage = () => {
 
   return (
     <div className="services-page">
+      <div className="services-back-wrap">
+        <BackButton />
+      </div>
 
       <section className="hero-section">
         <div className="hero-left">

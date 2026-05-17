@@ -1,0 +1,76 @@
+.back-button-slot {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 207, 255, 0.25);
+  background: rgba(8, 20, 40, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(0, 207, 255, 0.08);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+.back-button-icon {
+  font-size: 14px;
+  color: #00cfff;
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-2px) translateX(-2px);
+  border-color: rgba(0, 207, 255, 0.45);
+  box-shadow: 0 0 24px rgba(0, 207, 255, 0.22);
+  color: #38bdf8;
+}
+
+.back-button:hover .back-button-icon {
+  transform: translateX(-2px);
+}
+
+.back-button:active {
+  transform: translateY(0) translateX(0);
+}
+
+@media (max-width: 768px) {
+  .back-button-slot {
+    margin-bottom: 12px;
+  }
+
+  .back-button {
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-button,
+  .back-button-icon {
+    transition: none;
+  }
+
+  .back-button:hover {
+    transform: none;
+  }
+
+  .back-button:hover .back-button-icon {
+    transform: none;
+  }
+}

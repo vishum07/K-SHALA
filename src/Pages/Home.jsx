@@ -3,6 +3,7 @@ import "./Home.css";
 import herobg from "./images/Herobg.png";
 import logo from "./images/logon.jpg";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 import { FaArrowRight } from "react-icons/fa";
 import applink from "./images/applink.png";
 import b1 from "./images/b1.png";
@@ -26,6 +27,121 @@ import {
 
 } from "react-icons/fa";
 
+const featureCards = [
+  {
+    img: b1,
+    title: (
+      <>
+        NCERT Based <br /> Syllabus
+      </>
+    ),
+    desc: (
+      <>
+        Complete coverage <br /> for 1st to 12th
+      </>
+    ),
+  },
+  {
+    img: b2,
+    title: (
+      <>
+        Live & Recorded <br /> Classes
+      </>
+    ),
+    desc: (
+      <>
+        Learn from expert <br /> teachers
+      </>
+    ),
+  },
+  {
+    img: b3,
+    title: (
+      <>
+        Smart Quizzes & <br /> Tests
+      </>
+    ),
+    desc: (
+      <>
+        AI-powered tests <br /> to evaluate skills
+      </>
+    ),
+  },
+  {
+    img: b52,
+    title: <>Notes & PDFs</>,
+    desc: (
+      <>
+        Download important <br /> notes anytime
+      </>
+    ),
+  },
+  {
+    img: b6,
+    title: (
+      <>
+        Progress <br /> Tracking
+      </>
+    ),
+    desc: (
+      <>
+        Track performance <br /> and improve
+      </>
+    ),
+  },
+  {
+    img: b7,
+    title: (
+      <>
+        Doubt Solving <br /> 24x7
+      </>
+    ),
+    desc: (
+      <>
+        Get your doubts <br /> solved instantly
+      </>
+    ),
+  },
+];
+
+const classCards = [
+  {
+    img: img1,
+    cardClass: "class-card blue-card class1-img",
+    title: "1 - 2",
+    subtitle: "Foundation",
+    arrowClass: "arrow-btn green-arrow",
+  },
+  {
+    img: img2,
+    cardClass: "class-card dark-card class2-img",
+    title: "3 - 5",
+    subtitle: "Build Basics",
+    arrowClass: "arrow-btn blue-arrow",
+  },
+  {
+    img: img3,
+    cardClass: "class-card purple-card class3-img",
+    title: "6 - 8",
+    subtitle: "Strengthen Concepts",
+    arrowClass: "arrow-btn purple-arrow",
+  },
+  {
+    img: img4,
+    cardClass: "class-card violet-card class4-img",
+    title: "9 - 10",
+    subtitle: "Score Higher",
+    arrowClass: "arrow-btn violet-arrow",
+  },
+  {
+    img: img5,
+    cardClass: "class-card red-card class5-img",
+    title: "11 - 12",
+    subtitle: "Prepare for Future",
+    arrowClass: "arrow-btn red-arrow",
+  },
+];
+
 const Home = () => {
   return (
     <div className="homepage">
@@ -42,19 +158,17 @@ const Home = () => {
 
         <ul className="nav-links">
           <li className="active">Home</li>
-          <li>Classes</li>
-          <li>Subjects</li>
           <li>
-               <Link to="/servicespage">Services</Link>
+            <Link to="/servicespage">Services</Link>
           </li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
 
-        <div className="nav-buttons">
-          <button className="login-btn">Login</button>
-          <button className="signup-btn">Sign Up</button>
-        </div>
       </nav>
 
       <section className="hero-section">
@@ -70,21 +184,10 @@ const Home = () => {
           </h1>
 
           <p>
-            Complete NCERT based syllabus, interactive video lessons,
+            Complete NCERT and Maharashtra Board based syllabus, interactive video lessons,
             smart quizzes, live doubt solving & real-time progress
             tracking to help you excel in school and beyond.
           </p>
-
-          <div className="hero-buttons">
-            <button className="primary-btn">
-              Get Started Free →
-            </button>
-
-            <button className="secondary-btn">
-              <FaPlay /> Explore Classes
-            </button>
-          </div>
-
 
      <div className="stats-container">
       <div className="stat-card">
@@ -167,65 +270,18 @@ const Home = () => {
 
   <h2>Everything You Need to Learn & Succeed</h2>
 
-  <div className="features-grid">
-
-  
-    <div className="feature-card">
-      <div className="feature-icon">
-        <img src={b1} alt="" />
-      </div>
-
-      <h3>NCERT Based <br /> Syllabus</h3>
-      <p>Complete coverage <br /> for 1st to 12th</p>
+  <div className="marquee">
+    <div className="marquee-track">
+      {[...featureCards, ...featureCards].map((card, index) => (
+        <div className="feature-card" key={index}>
+          <div className="feature-icon">
+            <img src={card.img} alt="" />
+          </div>
+          <h3>{card.title}</h3>
+          <p>{card.desc}</p>
+        </div>
+      ))}
     </div>
-
-    <div className="feature-card">
-      <div className="feature-icon">
-        <img src={b2} alt="" />
-      </div>
-
-      <h3>Live & Recorded <br /> Classes</h3>
-      <p>Learn from expert <br /> teachers</p>
-    </div>
-
-    
-    <div className="feature-card">
-      <div className="feature-icon">
-       <img src={b3} alt="" />
-      </div>
-
-      <h3>Smart Quizzes & <br /> Tests</h3>
-      <p>AI-powered tests <br /> to evaluate skills</p>
-    </div>
-
-  
-    <div className="feature-card">
-      <div className="feature-icon">
-        <img src={b52} alt="" />
-      </div>
-
-      <h3>Notes & PDFs</h3>
-      <p>Download important <br /> notes anytime</p>
-    </div>
-
-    <div className="feature-card">
-      <div className="feature-icon">
-        <img src={b6} alt="" />
-      </div>
-
-      <h3>Progress <br /> Tracking</h3>
-      <p>Track performance <br /> and improve</p>
-    </div>
-
-    <div className="feature-card">
-      <div className="feature-icon">
-        <img src={b7} alt="" />
-      </div>
-
-      <h3>Doubt Solving <br /> 24x7</h3>
-      <p>Get your doubts <br /> solved instantly</p>
-    </div>
-
   </div>
 </section>
 
@@ -235,73 +291,23 @@ const Home = () => {
         Explore <span>Classes</span>
       </h2>
 
-      <div className="classes-grid">
+      <div className="marquee">
+        <div className="marquee-track">
+          {[...classCards, ...classCards].map((card, index) => (
+            <div className={card.cardClass} key={index}>
+              <img src={card.img} alt="" className="img-card" />
 
-        <div className="class-card blue-card class1-img">
-          <img src={img1} alt=""  className="img-card"/>
+              <div className="class-content">
+                <h3>{card.title}</h3>
+                <p>{card.subtitle}</p>
+              </div>
 
-          <div className="class-content">
-            <h3>1 - 2</h3>
-            <p>Foundation</p>
-          </div>
-
-         <div className="arrow-btn green-arrow">
-           <FaArrowRight />
+              <div className={card.arrowClass}>
+                <FaArrowRight />
+              </div>
+            </div>
+          ))}
         </div>
-        </div>
-
-        <div className="class-card dark-card class2-img">
-          <img src={img2} alt="" className="img-card"/>
-
-          <div className="class-content">
-            <h3>3 - 5</h3>
-            <p>Build Basics</p>
-          </div>
-
-          <div className="arrow-btn blue-arrow">
-            <FaArrowRight />
-          </div>
-        </div>
-
-        <div className="class-card purple-card class3-img">
-          <img src={img3} alt="" className="img-card"/>
-
-          <div className="class-content">
-            <h3>6 - 8</h3>
-            <p>Strengthen Concepts</p>
-          </div>
-
-          <div className="arrow-btn purple-arrow">
-            <FaArrowRight />
-          </div>
-        </div>
-
-        <div className="class-card violet-card class4-img">
-          <img src={img4} alt="" className="img-card"/>
-
-          <div className="class-content">
-            <h3>9 - 10</h3>
-            <p>Score Higher</p>
-          </div>
-
-          <div className="arrow-btn violet-arrow">
-            <FaArrowRight />
-          </div>
-        </div>
-
-        <div className="class-card red-card class5-img">
-          <img src={img5} alt="" className="img-card"/>
-
-          <div className="class-content">
-            <h3>11 - 12</h3>
-            <p>Prepare for Future</p>
-          </div>
-
-          <div className="arrow-btn red-arrow">
-            <FaArrowRight />
-          </div>
-        </div>
-
       </div>
 
     </section>
@@ -378,21 +384,7 @@ const Home = () => {
       </div>
     </section>
 
-     <footer className="footer-section">
-      <div className="footer-overlay">
-        <h3>
-          COPYRIGHT © 2016 – 2026 KSHETRAPATI INDUSTRIES PVT LTD.
-          ALL RIGHTS RESERVED.
-        </h3>
-
-        <div className="footer-links">
-          <a href="/">Home</a>
-           <Link to="/privacypolicy">Privacy Policy</Link>
-           <Link to="/termc">Terms & Conditions</Link>
-           <Link to="/support">Support</Link>
-        </div>
-      </div>
-    </footer>
+     <Footer />
     </div>
   );
 };

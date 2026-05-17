@@ -16,11 +16,13 @@ import ppa from './images/ppa.png';
 import React from "react";
 
 import "./JavaFullStackSyllabus.css";
+import BackButton from "../components/BackButton";
 
 
 const JavaFullStackSyllabus = () => {
   return (
     <div className="syllabus-container">
+      <BackButton />
       <div className="top-section">
         <div className="left-java">
           <img
