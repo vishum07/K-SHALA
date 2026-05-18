@@ -276,12 +276,13 @@ body {
 
 .hero-left h1 span {
   display: inline-block;
-  font-size: 60px;
+  font-size: clamp(2.8rem, 4.6vw, 3.85rem);
   background: linear-gradient(90deg, var(--text-primary), var(--accent-cyan), var(--primary-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 
 .hero-left p {
   font-size: 20px;
