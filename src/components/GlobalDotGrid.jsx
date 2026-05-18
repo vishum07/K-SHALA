@@ -238,9 +238,14 @@ const GlobalDotGrid = () => {
                            + Math.cos(by * 0.004 + time * 0.003);
           // colorNoise ranges roughly [-2, 2]; map this into our hue range.
           const normalizedNoise = (colorNoise + 2) / 4; // [0, 1]
-          const targetHue = Math.floor(160 + (normalizedNoise * 130)); // Range: ~160 to ~290
+          // const targetHue = Math.floor(160 + (normalizedNoise * 130)); // Range: ~160 to ~290 (kept for legacy mapping)
           
-          const dotColor = `hsl(${targetHue}, 90%, 65%)`;
+          // Orange/Gold remap (keeps the existing motion + masking logic intact)
+
+          // Convert the computed hue-ish value into a warm spectrum near 25°–45°.
+          const warmHue = Math.floor(25 + (normalizedNoise * 20)); // ~25..45
+          const dotColor = `hsl(${warmHue}, 95%, 62%)`;
+
 
           if (finalGlow > 0.5) {
             ctx.shadowBlur  = finalGlow;
@@ -308,8 +313,9 @@ const GlobalDotGrid = () => {
         width: '100%',
         height: '100%',
         pointerEvents: 'none',
-        zIndex: 10,              /* Above horizon (z-5/6) but behind content (z-100+) */
+        zIndex: 1,
         mixBlendMode: 'screen',
+
       }}
     />
   );

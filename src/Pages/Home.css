@@ -5,20 +5,21 @@
 }
 
 :root {
-  --bg-deep: #020617;
-  --bg-mid: #04122b;
-  --bg-light: #071a36;
-  --card-bg: rgba(8, 20, 40, 0.8);
-  --card-bg-solid: rgba(10, 25, 47, 0.9);
-  --primary-cyan: #00cfff;
-  --secondary-blue: #1da1ff;
-  --accent-cyan: #38bdf8;
-  --accent-orange: #ff9f1c;
-  --text-primary: #ffffff;
-  --text-secondary: #cbd5e1;
-  --border-glow: rgba(0, 207, 255, 0.35);
-  --border-subtle: rgba(0, 207, 255, 0.2);
-  --nav-glass: rgba(2, 6, 23, 0.75);
+  --bg-deep: #050816;
+  --bg-mid: #0B1220;
+  --bg-light: #0f1a33;
+  --card-bg: rgba(17, 24, 39, 0.7);
+  --card-bg-solid: rgba(17, 24, 39, 0.85);
+  --primary-cyan: #FF7A00;
+  --secondary-blue: #FFB347;
+  --accent-cyan: #FFC76A;
+  --accent-orange: #FF5C00;
+  --text-primary: #FFFFFF;
+  --text-secondary: #BFC7D5;
+  --border-glow: rgba(255, 122, 0, 0.35);
+  --border-subtle: rgba(255, 122, 0, 0.22);
+  --nav-glass: rgba(5, 8, 22, 0.72);
+
 }
 
 body {
@@ -104,7 +105,8 @@ body {
   background: var(--nav-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 207, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 122, 0, 0.18);
+
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
 }
 

@@ -1,4 +1,6 @@
 
+/* Premium modern UI - CSS-only redesign for Java Full Stack Syllabus */
+
 *{
   margin:0;
   padding:0;
@@ -10,170 +12,237 @@ body{
   background:#020617;
 }
 
+:root{
+  --kshala-primary:#ff8c00;
+  --kshala-secondary:#fbbf24;
+  --kshala-cyan:#00cfff;
+  --kshala-bg-1:#020617;
+  --kshala-bg-2:#04122b;
+  --kshala-bg-3:#071a36;
+  --kshala-text:rgba(255,255,255,0.98);
+  --kshala-text-muted:rgba(255,255,255,0.78);
+  --kshala-border-glow:rgba(255,140,0,0.35);
+  --kshala-border-subtle:rgba(255,140,0,0.20);
+  --kshala-glow:rgba(255,140,0,0.22);
+}
+
 .syllabus-container{
+  position:relative;
   background:
-    radial-gradient(circle at top left, rgba(0, 207, 255, 0.12), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(255, 159, 28, 0.08), transparent 25%),
-    linear-gradient(135deg, #020617, #04122b, #071a36);
-  color:white;
+    radial-gradient(circle at top left, rgba(255, 140, 0, 0.13), transparent 32%),
+    radial-gradient(circle at 70% 15%, rgba(0, 207, 255, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(251, 191, 36, 0.08), transparent 28%),
+    linear-gradient(135deg, var(--kshala-bg-1), var(--kshala-bg-2), var(--kshala-bg-3));
+  color:var(--kshala-text);
   padding:30px;
   min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* Subtle glass glow layer behind content */
+.syllabus-container::before{
+  content:"";
+  position:absolute;
+  inset:-40px;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 5%, rgba(255,140,0,0.10), transparent 40%),
+    radial-gradient(circle at 10% 45%, rgba(0,207,255,0.07), transparent 45%);
+  filter: blur(0px);
+  z-index:0;
+}
+
+.syllabus-container > *{
+  position:relative;
+  z-index:1;
 }
 
 .top-section{
-  display:flex;
-  justify-content:space-between;
+  display:grid;
+  grid-template-columns: 180px 1fr 320px;
   align-items:center;
-  margin-bottom:40px;
-  flex-wrap:wrap;
+  gap:26px;
+  margin-bottom:34px;
 }
 
 .left-java{
   text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
 }
 
 .left-java img{
-  width:120px;
+  width:96px;
+  height:96px;
+  object-fit:contain;
+  filter: drop-shadow(0 0 18px rgba(0,207,255,0.25));
 }
 
+/* Ensure all module rows have consistent spacing & avoid odd gaps */
+.module-wrapper{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Preserve original layout sizing while still benefiting from grid equal-height */
+.cards-row .card{ min-width: 0; }
+
+
 .left-java h2{
-  color:#00cfff;
-  font-size:30px;
-  margin-top:10px;
+  color: #00cfff;
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:0.3px;
+  text-shadow: 0 0 18px rgba(0,207,255,0.25);
 }
 
 .center-title{
-  flex:1;
   text-align:center;
 }
 
 .center-title h1{
-  font-size:40px;
-  font-weight:bold;
+  font-size:54px;
+  font-weight:900;
+  line-height:1.08;
+  letter-spacing:0.2px;
 }
 
 .center-title span{
-  background:linear-gradient(90deg, #38bdf8, #00cfff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
+  background: linear-gradient(90deg, var(--kshala-primary), var(--kshala-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow:0 0 22px rgba(255,140,0,0.30);
 }
 
 .center-title p{
-  color:#cbd5e1;
-  font-size:20px;
-  margin-top:15px;
-  line-height:1.8;
+  color: var(--kshala-text-muted);
+  font-size:18px;
+  margin-top:14px;
+  line-height:1.7;
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.right-image{
+  display:flex;
+  justify-content:center;
 }
 
 .right-image img{
-  width:260px;
+  width:280px;
+  height:auto;
+  display:block;
+  border-radius:20px;
+  border:1px solid rgba(255,140,0,0.18);
+  background: rgba(8,20,40,0.55);
+  padding:10px;
+  box-shadow:
+    0 0 0 1px rgba(255,140,0,0.10) inset,
+    0 0 40px rgba(255,140,0,0.12);
 }
 
-
+/* Dashboard-like module sections */
 .module-wrapper{
-  padding:15px;
-  margin-bottom:25px; 
+  padding:18px 10px;
+  margin-bottom:28px;
 }
 
 .module-title{
   display:inline-block;
-  background:linear-gradient(135deg, #00cfff, #1da1ff);
-  padding:4px 12px;
-  border-radius:10px;
-  font-size:18px;
-  font-weight:bold;
-  margin-bottom:35px;
+  background: linear-gradient(135deg, rgba(255,140,0,0.18), rgba(251,191,36,0.12));
+  border:1px solid rgba(255,140,0,0.28);
+  color:#fff;
+  padding:7px 14px;
+  border-radius:12px;
+  font-size:17px;
+  font-weight:900;
+  letter-spacing:0.7px;
+  margin-bottom:18px;
+  box-shadow: 0 0 24px rgba(255,140,0,0.14);
 }
 
 .cards-row{
-  display:flex;
-  gap:45px;
-  flex-wrap:wrap;
-  
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:18px;
+  align-items:stretch;
 }
 
-
 .card{
-  flex:1;
-  background:rgba(8, 20, 40, 0.8);
-  border:1px solid rgba(0, 207, 255, 0.2);
+  background: rgba(8, 20, 40, 0.58);
+  backdrop-filter: blur(10px);
+  border:1px solid var(--kshala-border-subtle);
   border-radius:18px;
-  padding:1ch;
-  box-shadow:0 0 20px rgba(0, 207, 255, 0.08);
+  padding:18px 18px 16px;
+  box-shadow:
+    0 0 0 1px rgba(255,140,0,0.06) inset,
+    0 0 22px rgba(255,140,0,0.08);
   transition:transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  height:100%;
+  display:flex;
+  flex-direction:column;
 }
 
 .card:hover{
   transform:translateY(-6px);
-  border-color:rgba(0, 207, 255, 0.35);
-  box-shadow:0 0 30px rgba(0, 207, 255, 0.18);
+  border-color: rgba(255,140,0,0.45);
+  box-shadow:
+    0 0 0 1px rgba(255,140,0,0.14) inset,
+    0 0 34px rgba(255,140,0,0.22);
 }
 
 .card-heading{
   display:flex;
   align-items:center;
-  gap:15px;
-  margin-bottom:20px;
+  gap:14px;
+  margin-bottom:14px;
+  min-height:56px;
 }
 
 .card-icon{
-    width: 40px;
-  height: 40px;
-  margin-bottom: 15px;
-  
-}
-
-.purple{
-  background:linear-gradient(135deg, #00cfff, #1da1ff);
-}
-
-.blue{
-  background:#2563eb;
-}
-
-.green{
-  background:#16a34a;
-}
-
-.orange{
-  background:#ea580c;
-}
-
-.pink{
-  background:#db2777;
-}
-
-.cyan{
-  background:#0891b2;
-}
-
-.yellow{
-  background:#ca8a04;
+  width:40px;
+  height:40px;
+  object-fit:contain;
+  flex:0 0 auto;
+  filter: drop-shadow(0 0 14px rgba(0,207,255,0.25));
 }
 
 .card h3{
-  font-size:30px;
+  font-size:22px;
+  font-weight:900;
+  color: #ffffff;
+  letter-spacing:0.2px;
+  text-shadow: 0 0 18px rgba(255,140,0,0.20);
 }
 
 .card ul{
-  padding-left:20px;
-  color:#2563eb;
+  padding-left:18px;
+  color: rgba(255,255,255,0.98);
+  margin-top:4px;
 }
 
 .card ul li{
-  margin-bottom:14px;
-  color: white;
-  line-height:1.0;
-  font-size:17px;
+  margin-bottom:11px;
+  color: rgba(255,255,255,0.93);
+  line-height:1.35;
+  font-size:16px;
 }
+
+.card ul li:last-child{ margin-bottom:0; }
 
 .card ul li::marker {
-  color: #00cfff;
+  color: var(--kshala-primary);
 }
 
+/* Internship section polish */
 .internship-wrapper {
-  margin-top: 20px;
+  margin-top: 18px;
   position: relative;
   width: 100%;
   min-height: 210px;
@@ -183,37 +252,58 @@ body{
   justify-content: center;
   align-items: center;
   padding: 30px;
+  border-radius: 22px;
+  background: rgba(8, 20, 40, 0.35);
+  border:1px solid rgba(255,140,0,0.18);
+  box-shadow:
+    0 0 0 1px rgba(255,140,0,0.05) inset,
+    0 0 30px rgba(255,140,0,0.10);
 }
+
+.internship-wrapper::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,140,0,0.16), transparent 35%),
+    radial-gradient(circle at 70% 60%, rgba(0,207,255,0.10), transparent 42%);
+  z-index:0;
+}
+
+.internship-wrapper > *{ position:relative; z-index:1; }
 
 .module-badge {
   position: absolute;
   top: 14px;
   left: 18px;
-  background: linear-gradient(135deg, #00cfff, #1da1ff);
-  color: white;
+  background: linear-gradient(90deg, var(--kshala-primary), var(--kshala-secondary));
+  color: #081018;
   padding: 8px 16px;
   border-radius: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing:0.5px;
+  box-shadow: 0 0 26px rgba(255,140,0,0.22);
 }
 
 .internship-content {
   text-align: center;
   z-index: 2;
-  max-width: 650px;
+  max-width: 680px;
 }
 
 .internship-content h1 {
   color: white;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 900;
   margin-top: 12px;
 }
 
 .internship-content p {
-  color: #d1d5db;
+  color: rgba(255,255,255,0.82);
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-top: 12px;
 }
 
@@ -225,9 +315,9 @@ body{
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00cfff, #1da1ff);
+  background: linear-gradient(135deg, var(--kshala-primary), var(--kshala-secondary));
   font-size: 34px;
-  box-shadow: 0 0 25px rgba(0, 207, 255, 0.45);
+  box-shadow: 0 0 28px rgba(255,140,0,0.35);
 }
 
 .left-building {
@@ -235,7 +325,8 @@ body{
   left: 160px;
   bottom: 32px;
   width: 180px;
-  opacity: 0.9;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 18px rgba(255,140,0,0.10));
 }
 
 .right-certificate {
@@ -244,117 +335,51 @@ body{
   bottom: 52px;
   width: 160px;
   opacity: 0.95;
+  filter: drop-shadow(0 0 18px rgba(255,140,0,0.10));
+}
+
+@media (max-width: 960px) {
+  .top-section{
+    grid-template-columns: 1fr;
+    gap:16px;
+    text-align:center;
+  }
+  .right-image{ margin-top:6px; }
+  .right-image img{ width: 240px; }
+  .cards-row{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
+  .syllabus-container{ padding: 18px; }
+  .center-title h1{ font-size: 42px; }
+  .center-title p{ font-size: 16px; max-width: 520px; }
+  .right-image img{ width: 180px; padding: 8px; }
+  .cards-row{ grid-template-columns: 1fr; }
+  .card h3{ font-size: 20px; }
+  .card ul li{ font-size: 15px; }
 
-  .internship-wrapper {
-    padding: 40px 20px;
-  }
-
-  .internship-content h1 {
-    font-size: 28px;
-  }
-
-  .internship-content p {
-    font-size: 16px;
-  }
+  .internship-wrapper{ padding: 40px 20px; }
+  .internship-content h1{ font-size: 28px; }
+  .internship-content p{ font-size: 16px; }
 
   .left-building,
   .right-certificate {
-    width: 100px;
-    opacity: 0.3;
+    width: 105px;
+    opacity: 0.35;
   }
 }
 
-.programming-card {
-  flex: 0.6;
-   max-width: 500px;
-}
+/* Preserve original per-card class hooks (no JSX changes) */
+.programming-card { max-width: 500px; }
+.sql-card{ max-width: 420px; }
+.softskill-card { max-width: 230px; }
+.core-java{ max-width: 380px; }
+.core-ui{ max-width: 220px; }
+.aptitude{ max-width: 300px; }
+.Core-Java3{ max-width: 260px; }
+.Advance-UI{ max-width: 260px; }
+.Mini-Projects{ max-width: 350px; }
+.Advance-Java{ max-width: 300px; }
+.Real-World-Projects{ max-width: 360px; }
+.Pre-Placement-Activities{ max-width: 440px; }
 
-.sql-card{
-  flex: 0.2;   
-  max-width: 420px;
-  height: 240px;
-}
-
-.softskill-card {
-  flex: 0.2;  
-  max-width: 230px;
-  height: 240px;
-}
-
-.core-java{
-  flex: 0.3;  
-  max-width: 380px;
-  height: 240px;
-}
-
-.core-ui{
-  flex: 0.2;  
-  max-width: 220px;
-  height: 240px;
-}
-
-.aptitude{
-  flex: 0.3; 
-max-width: 300px;
-}
-
-.Core-Java3{
-  flex: 0.4;  
-max-width: 260px;
-}
-
-.Advance-UI{
-  flex: 0.2;   
-max-width: 260px;
-height: 160px;
-}
-
-.Mini-Projects{
-  flex: 0.3;  
-max-width: 350px;
-height: 160px;
-}
-
-.Advance-Java{
-  flex: 0.5;  
-max-width: 300px;
-}
-
-
-.Real-World-Projects{
-  flex: 0.6;   
-max-width: 360px;
-height: 140px;
-}
-
-.Pre-Placement-Activities{
-  flex: 0.4;  
-max-width: 440px;
-height: 170px;
-}
-
-@media(max-width:768px){
-
-  .center-title h1{
-    font-size:42px;
-  }
-  .center-title p{
-    font-size:16px;
-  }
-
-  .right-image img{
-    width:180px;
-  }
-
-  .card h3{
-    font-size:24px;
-  }
-
-  .internship-box h2{
-    font-size:35px;
-  }
-
-}
