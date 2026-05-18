@@ -2,10 +2,20 @@ import { Clock3, BadgeCheck,  FolderKanban} from "lucide-react";
 import React from "react";
 import "./ServicesPage.css";
 import bg2 from "./images/bg2.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton";
 
 const ServicesPage = () => {
+  const navigate = useNavigate();
+
+  const handleExploreCourses = () => {
+    const el = document.getElementById("our-training-services");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const handleTalkToAdvisor = () => {
+    navigate("/contact");
+  };
 
   return (
     <div className="services-page">
@@ -31,11 +41,19 @@ const ServicesPage = () => {
           </p>
 
           <div className="hero-buttons">
-            <button className="primary-btn">
+            <button
+              className="primary-btn"
+              type="button"
+              onClick={handleExploreCourses}
+            >
               Explore Courses →
             </button>
 
-            <button className="secondary-btn">
+            <button
+              className="secondary-btn"
+              type="button"
+              onClick={handleTalkToAdvisor}
+            >
               Talk to Advisor
             </button>
           </div>
@@ -67,7 +85,7 @@ const ServicesPage = () => {
 
       </section>
 
-      <section className="courses-section">
+      <section id="our-training-services" className="courses-section">
 
         <span className="course-tag">
           OUR TRAINING SERVICES
