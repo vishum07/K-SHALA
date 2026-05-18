@@ -2,16 +2,8 @@ import leftbulding from "./images/leftBuilding.png";
 import Certificate from "./images/Certificate.png";
 import laptopcode from "./images/laptopcode.png";
 import pl from "./images/pl.png";
-import sql from "./images/sql.png";
 import ss from "./images/ss.png";
-import cv from "./images/cv.png";
-import cu from "./images/cu.png";
-import ap from "./images/ap.png";
-import au from "./images/au.png";
-import mp from "./images/mp.png";
-import adj from "./images/adj.png";
-import rwp from "./images/rwp.png";
-import ppa from "./images/ppa.png";
+
 import React from "react";
 
 import "./LinuxAdminSyllabus.css";
