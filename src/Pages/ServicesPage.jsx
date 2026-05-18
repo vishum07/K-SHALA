@@ -110,34 +110,16 @@ const ServicesPage = () => {
               Hibernate and build enterprise applications.
             </p>
             <div className="course-info">
-              <span><div  style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "#f5f3ff",
-                borderRadius: "30px",
-                }}>  <Clock3 size={18} color="#7c3aed" />
-                    6 Months
-                    </div></span>
-                   <span> <div
-                style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "#f5f3ff",
-                borderRadius: "30px",
-                }}>
-                <FolderKanban size={18} color="#7c3aed" />Live Projects</div></span>
-                <span> <div
-                style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "#f5f3ff",
-                borderRadius: "30px",
-                }}>
-                <BadgeCheck size={18} color="#7c3aed" />Certification</div></span>
-              </div>
+              <span>
+                <Clock3 size={18} color="#38bdf8" /> 6 Months
+              </span>
+              <span>
+                <FolderKanban size={18} color="#38bdf8" /> Live Projects
+              </span>
+              <span>
+                <BadgeCheck size={18} color="#38bdf8" /> Certification
+              </span>
+            </div>
 
             <div className="card-buttons">
                <Link to="/javafullstacksyllabus">
@@ -162,42 +144,23 @@ const ServicesPage = () => {
             </p>
 
             <div className="course-info">
-                      <div className="course-info">
-                    <span><div  style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "#f5f3ff",
-                borderRadius: "30px",
-                }}>  <Clock3 size={18} color="#7c3aed" />
-                    6 Months
-                    </div></span>
-
-                    <span>  <div
-                style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "#f5f3ff",
-                borderRadius: "30px",
-                }}>
-                <FolderKanban size={18} color="#7c3aed" />Live Projects</div></span>
-               <span> <div
-                style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "#f5f3ff",
-                borderRadius: "30px",
-                }}>
-                <BadgeCheck size={18} color="#7c3aed" />Certification</div></span>
-                    </div>
+              <span>
+                <Clock3 size={18} color="#38bdf8" /> 6 Months
+              </span>
+              <span>
+                <FolderKanban size={18} color="#38bdf8" /> Live Projects
+              </span>
+              <span>
+                <BadgeCheck size={18} color="#38bdf8" /> Certification
+              </span>
             </div>
 
             <div className="card-buttons">
-              <button className="outline-btn">
-                View Details
-              </button>
+              <Link to="/dotnetsyllabus">
+                <button className="outline-btn">
+                  View Details
+                </button>
+              </Link>
 
               <button className="filled-btn">
                 Enroll Now →
@@ -215,39 +178,161 @@ const ServicesPage = () => {
             </p>
 
             <div className="course-info">
-                <div className="course-info">
-                    <span><div  style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "#f5f3ff",
-                borderRadius: "30px",
-                }}>  <Clock3 size={18} color="#7c3aed" />
-                    6 Months
-                    </div></span>
-                    <span>  <div
-                style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "#f5f3ff",
-                borderRadius: "30px",
-                }}>
-                <FolderKanban size={18} color="#7c3aed" />Live Projects</div></span>
-               <span> <div
-                style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "#f5f3ff",
-                borderRadius: "30px",
-                }}>
-                <BadgeCheck size={18} color="#7c3aed" />Certification</div></span>
-                    </div>
+              <span>
+                <Clock3 size={18} color="#38bdf8" /> 6 Months
+              </span>
+              <span>
+                <FolderKanban size={18} color="#38bdf8" /> Live Projects
+              </span>
+              <span>
+                <BadgeCheck size={18} color="#38bdf8" /> Certification
+              </span>
             </div>
 
             <div className="card-buttons">
-             <button className="outline-btn">View Details</button>
+              <Link to="/pythonsyllabus">
+                <button className="outline-btn">View Details</button>
+              </Link>
+              <button className="filled-btn">
+                Enroll Now →
+              </button>
+            </div>
+          </div>
+
+          <div className="course-card">
+            <h3>Oracle DBA</h3>
+            <h4>Course Modules</h4>
+            <p>
+              Master database architecture, administration, backup,
+              recovery, and performance tuning with Oracle Database.
+            </p>
+            <div className="course-info">
+              <span>
+                <Clock3 size={18} color="#38bdf8" /> 6 Months
+              </span>
+              <span>
+                <FolderKanban size={18} color="#38bdf8" /> Live Projects
+              </span>
+              <span>
+                <BadgeCheck size={18} color="#38bdf8" /> Certification
+              </span>
+            </div>
+            <div className="card-buttons">
+              <Link to="/oracledbasyllabus">
+                <button className="outline-btn">View Details</button>
+              </Link>
+              <button className="filled-btn">
+                Enroll Now →
+              </button>
+            </div>
+          </div>
+
+          <div className="course-card">
+            <h3>Oracle SQL Developer</h3>
+            <h4>Course Modules</h4>
+            <p>
+              Learn to design, create, and manage relational databases using
+              advanced SQL queries and PL/SQL programming.
+            </p>
+            <div className="course-info">
+              <span>
+                <Clock3 size={18} color="#38bdf8" /> 6 Months
+              </span>
+              <span>
+                <FolderKanban size={18} color="#38bdf8" /> Live Projects
+              </span>
+              <span>
+                <BadgeCheck size={18} color="#38bdf8" /> Certification
+              </span>
+            </div>
+            <div className="card-buttons">
+              <Link to="/oraclesqlsyllabus">
+                <button className="outline-btn">View Details</button>
+              </Link>
+              <button className="filled-btn">
+                Enroll Now →
+              </button>
+            </div>
+          </div>
+
+          <div className="course-card">
+            <h3>Application Support</h3>
+            <h4>IT Operations</h4>
+            <p>
+              Gain expertise in maintaining, troubleshooting, and supporting
+              enterprise applications in production environments.
+            </p>
+            <div className="course-info">
+              <span>
+                <Clock3 size={18} color="#38bdf8" /> 6 Months
+              </span>
+              <span>
+                <FolderKanban size={18} color="#38bdf8" /> Live Projects
+              </span>
+              <span>
+                <BadgeCheck size={18} color="#38bdf8" /> Certification
+              </span>
+            </div>
+            <div className="card-buttons">
+              <Link to="/appsupportsyllabus">
+                <button className="outline-btn">View Details</button>
+              </Link>
+              <button className="filled-btn">
+                Enroll Now →
+              </button>
+            </div>
+          </div>
+
+          <div className="course-card">
+            <h3>Linux Administration</h3>
+            <h4>Course Modules</h4>
+            <p>
+              Master Linux system administration, shell scripting, networking,
+              security, and server management.
+            </p>
+            <div className="course-info">
+              <span>
+                <Clock3 size={18} color="#38bdf8" /> 6 Months
+              </span>
+              <span>
+                <FolderKanban size={18} color="#38bdf8" /> Live Projects
+              </span>
+              <span>
+                <BadgeCheck size={18} color="#38bdf8" /> Certification
+              </span>
+            </div>
+            <div className="card-buttons">
+              <Link to="/linuxadminsyllabus">
+                <button className="outline-btn">View Details</button>
+              </Link>
+              <button className="filled-btn">
+                Enroll Now →
+              </button>
+            </div>
+          </div>
+
+          <div className="course-card">
+            <h3>Software Testing</h3>
+            <h4>QA & Automation</h4>
+            <p>
+              Learn manual testing methodologies and automated testing using
+              Selenium, JUnit, and modern CI/CD tools.
+            </p>
+            <div className="course-info">
+              <span>
+                <Clock3 size={18} color="#38bdf8" /> 6 Months
+              </span>
+              <span>
+                <FolderKanban size={18} color="#38bdf8" /> Live Projects
+              </span>
+              <span>
+                <BadgeCheck size={18} color="#38bdf8" /> Certification
+              </span>
+            </div>
+            <div className="card-buttons">
+              <Link to="/softwaretestingsyllabus">
+                <button className="outline-btn">View Details</button>
+              </Link>
               <button className="filled-btn">
                 Enroll Now →
               </button>
