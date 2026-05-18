@@ -7,10 +7,12 @@ import TermsConditions from "./Pages/TermsConditions";
 import Support from "./Pages/Support";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
+import GlobalDotGrid from "./components/GlobalDotGrid";
 
 function App() {
   return (
     <div className="App">
+      <GlobalDotGrid />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/servicespage" element={<ServicesPage />} />
@@ -29,3 +31,4 @@ function App() {
 }
 
 export default App;
+
