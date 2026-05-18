@@ -12,12 +12,32 @@
   --nav-glass: rgba(5, 8, 22, 0.72);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Safe responsive defaults: prevent production-only browser scaling issues */
+html {
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 html, body {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -26,8 +46,6 @@ body {
   background: var(--bg-deep);
   color: var(--text-primary);
 }
-
-
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -43,3 +61,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
