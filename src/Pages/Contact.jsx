@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import logo from "./images/logon.jpg";
+import logo from "./images/logon.webp";
 import Footer from "./Footer";
 import BackButton from "../components/BackButton";
 import "./Home.css";

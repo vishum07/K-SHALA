@@ -1,18 +1,18 @@
 
-import leftbulding from "./images/leftBuilding.png";
-import Certificate from "./images/Certificate.png";
-import laptopcode from './images/laptopcode.png';
-import pl from './images/pl.png';
-import sql from './images/sql.png';
-import ss from './images/ss.png';
-import cv from './images/cv.png';
-import cu from './images/cu.png';
-import ap from './images/ap.png';
-import au from './images/au.png';
-import mp from './images/mp.png';
-import adj from './images/adj.png';
-import rwp from './images/rwp.png';
-import ppa from './images/ppa.png';
+import leftbulding from "./images/leftBuilding.webp";
+import Certificate from "./images/Certificate.webp";
+import laptopcode from './images/laptopcode.webp';
+import pl from './images/pl.webp';
+import sql from './images/sql.webp';
+import ss from './images/ss.webp';
+import cv from './images/cv.webp';
+import cu from './images/cu.webp';
+import ap from './images/ap.webp';
+import au from './images/au.webp';
+import mp from './images/mp.webp';
+import adj from './images/adj.webp';
+import rwp from './images/rwp.webp';
+import ppa from './images/ppa.webp';
 import React from "react";
 
 import "./JavaFullStackSyllabus.css";

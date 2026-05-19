@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./images/logon.jpg";
+import logo from "./images/logon.webp";
 import Footer from "./Footer";
 import BackButton from "../components/BackButton";
 import "./LegalPage.css";

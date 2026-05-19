@@ -1,8 +1,8 @@
-import leftbulding from "./images/leftBuilding.png";
-import Certificate from "./images/Certificate.png";
-import laptopcode from "./images/laptopcode.png";
-import sql from "./images/sql.png";
-import ss from "./images/ss.png";
+import leftbulding from "./images/leftBuilding.webp";
+import Certificate from "./images/Certificate.webp";
+import laptopcode from "./images/laptopcode.webp";
+import sql from "./images/sql.webp";
+import ss from "./images/ss.webp";
 
 import React from "react";
 

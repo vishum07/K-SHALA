@@ -1,7 +1,7 @@
 import { Clock3, BadgeCheck,  FolderKanban} from "lucide-react";
 import React from "react";
 import "./ServicesPage.css";
-import bg2 from "./images/bg2.png";
+import bg2 from "./images/bg2.webp";
 import { Link, useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton";
 

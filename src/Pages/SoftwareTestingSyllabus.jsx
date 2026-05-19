@@ -1,7 +1,7 @@
-import leftbulding from "./images/leftBuilding.png";
-import Certificate from "./images/Certificate.png";
-import laptopcode from "./images/laptopcode.png";
-import adj from "./images/adj.png";
+import leftbulding from "./images/leftBuilding.webp";
+import Certificate from "./images/Certificate.webp";
+import laptopcode from "./images/laptopcode.webp";
+import adj from "./images/adj.webp";
 
 import React from "react";
 

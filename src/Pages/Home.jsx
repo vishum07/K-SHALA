@@ -1,22 +1,22 @@
 import React from "react";
 import "./Home.css";
-import herobg from "./images/Herobg.png";
-import logo from "./images/logon.jpg";
+import herobg from "./images/Herobg.webp";
+import logo from "./images/logon.webp";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import { FaArrowRight } from "react-icons/fa";
-import applink from "./images/applink.png";
-import b1 from "./images/b1.png";
-import b2 from "./images/b2.png";
-import b3 from "./images/b3.png";
-import b52 from "./images/b52.png";
-import b6 from "./images/b6.png";
-import b7 from "./images/b7.png";
-import img1 from "./images/class1.png";
-import img2 from "./images/class2.png";
-import img3 from "./images/class3.png";
-import img4 from "./images/class4.png";
-import img5 from "./images/class5.png";
+import applink from "./images/applink.webp";
+import b1 from "./images/b1.webp";
+import b2 from "./images/b2.webp";
+import b3 from "./images/b3.webp";
+import b52 from "./images/b52.webp";
+import b6 from "./images/b6.webp";
+import b7 from "./images/b7.webp";
+import img1 from "./images/class1.webp";
+import img2 from "./images/class2.webp";
+import img3 from "./images/class3.webp";
+import img4 from "./images/class4.webp";
+import img5 from "./images/class5.webp";
 
 import {
   FaCheckCircle,

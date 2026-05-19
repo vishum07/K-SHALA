@@ -14,9 +14,15 @@ const GlobalDotGrid = () => {
     let animationFrameId;
     let time = 0;
 
+    let isMobile = window.innerWidth < 768;
+
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      isMobile = window.innerWidth < 768;
+      if (isMobile) {
+        draw(); // force a draw on resize when paused
+      }
     };
     resize();
     window.addEventListener('resize', resize);
@@ -45,7 +51,7 @@ const GlobalDotGrid = () => {
     window.addEventListener('message', handleMessage);
 
 
-    const SPACING = 30; // Slightly looser spacing
+    const SPACING = isMobile ? 60 : 45; // Reduced particle count (was 30)
     const DOT_R   = 1.1;
 
     /* ─────────── Wave layer definitions ───
@@ -65,6 +71,11 @@ const GlobalDotGrid = () => {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       time += 1;
+
+      if (isMobile && time > 1) {
+        // Pause animation on mobile after the first frame
+        return;
+      }
 
       const mx = mouse.current.x;
       const my = mouse.current.y;
@@ -289,7 +300,9 @@ const GlobalDotGrid = () => {
 
       ctx.shadowBlur  = 0;
       ctx.globalAlpha = 1;
-      animationFrameId = requestAnimationFrame(draw);
+      if (!isMobile) {
+        animationFrameId = requestAnimationFrame(draw);
+      }
     };
 
     draw();
